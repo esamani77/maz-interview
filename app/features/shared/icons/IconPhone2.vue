@@ -11,8 +11,8 @@ withDefaults(defineProps<Props>(), {
 <template>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    :width="size"
-    :height="size"
+    :width.attr="size"
+    :height.attr="size"
     viewBox="0 0 24 24"
     fill="none"
   >

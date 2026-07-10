@@ -17,8 +17,8 @@ withDefaults(defineProps<Props>(), {
     stroke-width="1.5"
     stroke-linecap="round"
     stroke-linejoin="round"
-    :width="size"
-    :height="size"
+    :width.attr="size"
+    :height.attr="size"
   >
     <line x1="4" y1="7" x2="20" y2="7" />
     <line x1="4" y1="12" x2="20" y2="12" />

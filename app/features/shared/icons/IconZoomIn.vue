@@ -17,8 +17,8 @@ withDefaults(defineProps<Props>(), {
     stroke-width="1.5"
     stroke-linecap="round"
     stroke-linejoin="round"
-    :width="size"
-    :height="size"
+    :width.attr="size"
+    :height.attr="size"
   >
     <circle cx="11" cy="11" r="7" />
     <path d="m21 21-4.3-4.3" />

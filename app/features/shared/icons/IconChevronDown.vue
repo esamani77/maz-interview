@@ -17,8 +17,8 @@ withDefaults(defineProps<Props>(), {
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
-    :width="size"
-    :height="size"
+    :width.attr="size"
+    :height.attr="size"
     aria-hidden="true"
   >
     <path d="m6 9 6 6 6-6" />
