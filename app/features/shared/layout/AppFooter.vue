@@ -85,7 +85,7 @@ const quickAccess = [
               <span
                 class="flex h-6 w-6 items-center justify-center rounded-full text-gray-500 transition-colors hover:text-gray-500"
               >
-                <component :is="item.icon" class="" />
+                <component :is="item.icon" />
               </span>
               {{ item.label }}
             </a>

@@ -29,21 +29,7 @@ const hasActiveFilters = computed(
       <span
         class="flex items-center gap-2 rounded-full bg-brand-light px-3 py-1.5 text-sm text-brand"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 shrink-0"
-          aria-hidden="true"
-        >
-          <path d="M3 6h18" />
-          <path d="M7 12h10" />
-          <path d="M10 18h4" />
-        </svg>
+        <IconSort class="h-4 w-4 shrink-0" />
         <span>{{ getSortChipLabel(sortBy) }}</span>
         <button
           type="button"
@@ -51,20 +37,7 @@ const hasActiveFilters = computed(
           aria-label="حذف فیلتر مرتب‌سازی"
           @click="emit('clearSort')"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-4 w-4"
-            aria-hidden="true"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <IconClose class="h-4 w-4" />
         </button>
       </span>
 
@@ -72,20 +45,7 @@ const hasActiveFilters = computed(
         v-if="search"
         class="flex items-center gap-2 rounded-full bg-violet-100 px-3 py-1.5 text-sm text-violet-700"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 shrink-0"
-          aria-hidden="true"
-        >
-          <circle cx="11" cy="11" r="7" />
-          <path d="m20 20-3.5-3.5" />
-        </svg>
+        <IconSearch class="h-4 w-4 shrink-0" />
         <span>{{ search }}</span>
         <button
           type="button"
@@ -93,20 +53,7 @@ const hasActiveFilters = computed(
           aria-label="حذف فیلتر جستجو"
           @click="emit('clearSearch')"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-4 w-4"
-            aria-hidden="true"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <IconClose class="h-4 w-4" />
         </button>
       </span>
 
@@ -115,22 +62,7 @@ const hasActiveFilters = computed(
         :key="category"
         class="flex items-center gap-2 rounded-full bg-violet-100 px-3 py-1.5 text-sm text-violet-700"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="h-4 w-4 shrink-0"
-          aria-hidden="true"
-        >
-          <path d="M4 9h16" />
-          <path d="M4 15h16" />
-          <path d="M10 3 8 21" />
-          <path d="m16 3-2 18" />
-        </svg>
+        <IconTag class="h-4 w-4 shrink-0" />
         <span>{{ category }}</span>
         <button
           type="button"
@@ -138,20 +70,7 @@ const hasActiveFilters = computed(
           :aria-label="`حذف فیلتر ${category}`"
           @click="emit('removeCategory', category)"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-4 w-4"
-            aria-hidden="true"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <IconClose class="h-4 w-4" />
         </button>
       </span>
     </div>

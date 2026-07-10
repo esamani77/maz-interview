@@ -51,20 +51,7 @@ const categoriesOpen = ref(true);
         class="flex items-center rounded-2xl border-2 border-brand bg-white px-4 py-2.5"
       >
         <span class="shrink-0 text-brand">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-5 w-5"
-            aria-hidden="true"
-          >
-            <circle cx="11" cy="11" r="7" />
-            <path d="m20 20-3.5-3.5" />
-          </svg>
+          <IconSearch class="h-5 w-5" />
         </span>
 
         <span class="mx-3 h-5 w-px shrink-0 bg-gray-200" aria-hidden="true" />
@@ -84,20 +71,7 @@ const categoriesOpen = ref(true);
           aria-label="پاک کردن جستجو"
           @click="clearSearch"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="h-4 w-4"
-            aria-hidden="true"
-          >
-            <path d="M18 6 6 18" />
-            <path d="m6 6 12 12" />
-          </svg>
+          <IconClose class="h-4 w-4" />
         </button>
       </div>
 
@@ -118,20 +92,10 @@ const categoriesOpen = ref(true);
         @click="sortOpen = !sortOpen"
       >
         <h3 class="text-base font-semibold text-ink">مرتب سازی</h3>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+        <IconChevronDown
           class="h-5 w-5 text-ink-muted transition-transform duration-200"
           :class="{ 'rotate-180': !sortOpen }"
-          aria-hidden="true"
-        >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
+        />
       </button>
 
       <div v-show="sortOpen" class="mt-2">
@@ -154,20 +118,10 @@ const categoriesOpen = ref(true);
         @click="categoriesOpen = !categoriesOpen"
       >
         <h3 class="text-base font-semibold text-ink">دسته بندی</h3>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+        <IconChevronDown
           class="h-5 w-5 text-ink-muted transition-transform duration-200"
           :class="{ 'rotate-180': !categoriesOpen }"
-          aria-hidden="true"
-        >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
+        />
       </button>
 
       <div v-show="categoriesOpen" class="mt-2">
