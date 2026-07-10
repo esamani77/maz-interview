@@ -27,7 +27,7 @@ const isSelected = computed(() => props.modelValue === props.value);
       :checked="isSelected"
       class="sr-only"
       @change="emit('update:modelValue', value)"
-    />
+    >
     <span
       class="text-sm transition-colors"
       :class="isSelected ? 'text-ink' : 'text-ink-muted'"

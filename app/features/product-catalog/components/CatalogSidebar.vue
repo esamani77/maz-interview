@@ -75,7 +75,7 @@ const categoriesOpen = ref(true);
           placeholder="جستجو..."
           class="min-w-0 flex-1 bg-transparent text-sm text-ink placeholder:text-ink-muted focus:outline-none"
           @keydown.enter="submitSearch"
-        />
+        >
 
         <button
           v-if="searchDraft"

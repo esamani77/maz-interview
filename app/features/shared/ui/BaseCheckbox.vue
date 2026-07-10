@@ -5,7 +5,7 @@ interface Props {
   count?: number;
 }
 
-const props = defineProps<Props>();
+defineProps<Props>();
 const emit = defineEmits<{ "update:modelValue": [value: boolean] }>();
 </script>
 
@@ -40,7 +40,7 @@ const emit = defineEmits<{ "update:modelValue": [value: boolean] }>();
         @change="
           emit('update:modelValue', ($event.target as HTMLInputElement).checked)
         "
-      />
+      >
       <span
         class="text-sm transition-colors"
         :class="modelValue ? 'text-ink' : 'text-ink-muted'"

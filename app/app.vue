@@ -1,5 +1,12 @@
+<script setup lang="ts">
+useHead({
+  titleTemplate: (titleChunk) =>
+    titleChunk ? `${titleChunk} | فروشگاه` : "فروشگاه",
+});
+</script>
+
 <template>
-  <div lang="fa" dir="rtl">
+  <div>
     <NuxtRouteAnnouncer />
     <AppHeader />
     <main>

@@ -97,7 +97,7 @@ const quickAccess = [
     <div
       class="border-t border-gray-100 px-4 py-8 sm:px-6 lg:px-8 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
     >
-      <div class="lg:w-1/3"></div>
+      <div class="lg:w-1/3"/>
       <div class="lg:w-1/3">
         <p
           class="mx-auto max-w-xs text-center text-xs leading-6 text-ink-muted"
@@ -122,14 +122,20 @@ const quickAccess = [
       </div>
 
       <div class="mt-6 flex items-center justify-center gap-3 lg:w-1/3">
-        <img
+        <NuxtImg
           src="/images/enamd-placeholder.png"
           alt="نماد اعتماد الکترونیکی"
+          width="64"
+          height="64"
+          loading="lazy"
           class="h-16 w-16 rounded-md border border-gray-100 bg-white object-contain p-1"
         />
-        <img
+        <NuxtImg
           src="/images/tegarat-placeholder.png"
           alt="نماد ساماندهی"
+          width="64"
+          height="64"
+          loading="lazy"
           class="h-16 w-16 rounded-md border border-gray-100 bg-white object-contain p-1"
         />
       </div>

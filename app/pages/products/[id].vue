@@ -7,6 +7,14 @@ const {
   status,
   error,
 } = await useFetch<Product>(`/api/products/${route.params.id}`);
+
+useSeoMeta({
+  title: () => product.value?.title ?? "محصول یافت نشد",
+  description: () => product.value?.description?.slice(0, 160),
+  ogTitle: () => product.value?.title,
+  ogDescription: () => product.value?.description?.slice(0, 160),
+  ogImage: () => product.value?.image,
+});
 </script>
 
 <template>

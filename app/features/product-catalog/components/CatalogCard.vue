@@ -9,9 +9,13 @@ defineProps<{ product: Product }>();
     class="flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm"
   >
     <NuxtLink :to="`/products/${product.id}`" class="block">
-      <img
+      <NuxtImg
         :src="product.image"
         :alt="product.title"
+        width="400"
+        height="176"
+        loading="lazy"
+        sizes="sm:100vw md:50vw lg:33vw"
         class="h-44 w-full object-cover"
       />
     </NuxtLink>

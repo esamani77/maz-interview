@@ -21,6 +21,12 @@ const categoryCounts = computed(() =>
 
 const { search, sortBy, selectedCategories, toggleCategory, filteredProducts } =
   useCatalogFilters(productList);
+
+useSeoMeta({
+  title: "لیست محصولات",
+  description:
+    "مشاهده، جستجو و فیلتر محصولات فروشگاه بر اساس دسته‌بندی و امتیاز.",
+});
 </script>
 
 <template>

@@ -2,9 +2,23 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxt/eslint", "@nuxt/image"],
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "fa",
+        dir: "rtl",
+      },
+    },
+  },
+  routeRules: {
+    "/": { redirect: "/products" },
+  },
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
+  },
+  image: {
+    domains: ["fakestoreapi.com"],
   },
   components: [
     { path: "~/features/shared/ui", pathPrefix: false },

@@ -14,13 +14,13 @@ defineProps<{
       <IconHome :size="18" />
     </NuxtLink>
 
-    <span aria-hidden="true" class="text-ink-muted/60">&lsaquo;</span>
+    <span aria-hidden="true" class="text-ink-muted/60 rotate-180">&lsaquo;</span>
 
     <NuxtLink to="/products" class="transition-colors hover:text-brand">
       لیست محصولات
     </NuxtLink>
 
-    <span aria-hidden="true" class="text-ink-muted/60">&lsaquo;</span>
+    <span aria-hidden="true" class="text-ink-muted/60 rotate-180">&lsaquo;</span>
 
     <span class="text-ink">{{ category }}</span>
   </nav>

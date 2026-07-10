@@ -1,10 +1,42 @@
 import type { Product, SortOption } from "../types";
-import { DEFAULT_SORT } from "../types";
+import { DEFAULT_SORT, SORT_OPTIONS } from "../types";
+
+const SORT_VALUES = SORT_OPTIONS.map((option) => option.value);
+
+function isSortOption(value: unknown): value is SortOption {
+  return (
+    typeof value === "string" && SORT_VALUES.includes(value as SortOption)
+  );
+}
 
 export function useCatalogFilters(products: Ref<Product[]>) {
-  const search = ref("");
-  const sortBy = ref<SortOption>(DEFAULT_SORT);
-  const selectedCategories = ref<string[]>([]);
+  const route = useRoute();
+  const router = useRouter();
+
+  const search = ref(typeof route.query.q === "string" ? route.query.q : "");
+  const sortBy = ref<SortOption>(
+    isSortOption(route.query.sort) ? route.query.sort : DEFAULT_SORT,
+  );
+  const selectedCategories = ref<string[]>(
+    typeof route.query.categories === "string" && route.query.categories
+      ? route.query.categories.split(",")
+      : [],
+  );
+
+  watch(
+    [search, sortBy, selectedCategories],
+    ([searchValue, sortValue, categories]) => {
+      router.replace({
+        query: {
+          ...route.query,
+          q: searchValue.trim() || undefined,
+          sort: sortValue === DEFAULT_SORT ? undefined : sortValue,
+          categories: categories.length > 0 ? categories.join(",") : undefined,
+        },
+      });
+    },
+    { deep: true },
+  );
 
   function toggleCategory(category: string) {
     const index = selectedCategories.value.indexOf(category);

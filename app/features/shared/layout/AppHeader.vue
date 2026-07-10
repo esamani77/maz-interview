@@ -39,7 +39,7 @@ watch(() => route.path, closeMobileMenu);
     <div
       class="mx-auto hidden h-[120px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 md:flex"
     >
-      <div></div>
+      <div/>
       <nav class="flex items-center gap-8">
         <NuxtLink
           v-for="link in navLinks"

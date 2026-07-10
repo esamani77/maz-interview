@@ -15,9 +15,12 @@ const isZoomed = ref(false);
       <IconZoomIn :size="20" />
     </button>
 
-    <img
+    <NuxtImg
       :src="image"
       :alt="title"
+      width="800"
+      height="310"
+      sizes="sm:100vw lg:800px"
       class="aspect-[16/9] w-full object-cover sm:aspect-[2/1] max-h-[310px]"
     />
 
@@ -34,9 +37,10 @@ const isZoomed = ref(false);
       >
         &times;
       </button>
-      <img
+      <NuxtImg
         :src="image"
         :alt="title"
+        width="1200"
         class="max-h-[85vh] max-w-full rounded-2xl object-contain"
         @click.stop
       />
