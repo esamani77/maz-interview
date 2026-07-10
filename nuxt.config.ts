@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     { path: "~/features/shared/ui", pathPrefix: false },
     { path: "~/features/shared/layout", pathPrefix: false },
     { path: "~/features/shared/icons", pathPrefix: false },
+    { path: "~/features/product-catalog/components", pathPrefix: false },
+    { path: "~/features/product-detail/components", pathPrefix: false },
   ],
   imports: {
     dirs: ["features/*/composables"],
@@ -17,5 +19,9 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     typeCheck: false,
+  },
+  runtimeConfig: {
+    fakeStoreApiBaseUrl:
+      process.env.FAKE_STORE_API_BASE_URL || "https://fakestoreapi.com",
   },
 });

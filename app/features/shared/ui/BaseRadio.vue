@@ -1,25 +1,38 @@
 <script setup lang="ts">
 interface Props {
-  modelValue: string
-  value: string
-  label: string
-  name: string
+  modelValue: string;
+  value: string;
+  label: string;
+  name: string;
 }
 
-defineProps<Props>()
-const emit = defineEmits<{ 'update:modelValue': [value: string] }>()
+const props = defineProps<Props>();
+const emit = defineEmits<{ "update:modelValue": [value: string] }>();
+
+const isSelected = computed(() => props.modelValue === props.value);
 </script>
 
 <template>
-  <label class="flex cursor-pointer items-center gap-2 py-1.5 text-sm text-ink">
+  <label class="flex cursor-pointer items-center gap-3 py-2">
+    <span
+      class="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors"
+      :class="isSelected ? 'border-brand' : 'border-gray-300'"
+    >
+      <span v-if="isSelected" class="h-2.5 w-2.5 rounded-full bg-brand" />
+    </span>
     <input
       type="radio"
       :name="name"
       :value="value"
-      :checked="modelValue === value"
-      class="h-4 w-4 border-gray-300 text-brand focus:ring-brand"
+      :checked="isSelected"
+      class="sr-only"
       @change="emit('update:modelValue', value)"
+    />
+    <span
+      class="text-sm transition-colors"
+      :class="isSelected ? 'text-ink' : 'text-ink-muted'"
     >
-    <span>{{ label }}</span>
+      {{ label }}
+    </span>
   </label>
 </template>

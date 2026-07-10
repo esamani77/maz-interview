@@ -1,7 +1,7 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+await navigateTo('/products')
+</script>
 
 <template>
-  <div>
-    <h1>Home</h1>
-  </div>
+  <div />
 </template>

@@ -8,6 +8,9 @@ export default <Partial<Config>>{
         sans: ["Vazirmatn", "system-ui", "sans-serif"],
       },
       colors: {
+        gray: {
+          25: "#F5F7FA",
+        },
         brand: {
           DEFAULT: "#D6336C",
           dark: "#B32657",
