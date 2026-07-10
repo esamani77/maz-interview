@@ -1,5 +1,5 @@
 <template>
-  <div class="flex min-h-screen flex-col">
+  <div class="flex min-h-screen flex-col" lang="fa" dir="rtl">
     <NuxtRouteAnnouncer />
     <AppHeader />
     <main>

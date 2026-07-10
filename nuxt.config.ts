@@ -6,8 +6,14 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: "~/assets/css/main.css",
   },
-  components: [{ path: "~/features/shared/layout", pathPrefix: false }],
-
+  components: [
+    { path: "~/features/shared/ui", pathPrefix: false },
+    { path: "~/features/shared/layout", pathPrefix: false },
+    { path: "~/features/shared/icons", pathPrefix: false },
+  ],
+  imports: {
+    dirs: ["features/*/composables"],
+  },
   typescript: {
     strict: true,
     typeCheck: false,
