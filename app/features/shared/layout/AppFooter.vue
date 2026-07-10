@@ -7,8 +7,8 @@ import IconYoutube from "~/features/shared/icons/socails/IconYoutube.vue";
 
 const socialLinks = [
   { label: "تلگرام", href: "https://t.me/", icon: IconTelegram },
-  { label: "اینستاگرام", href: "https://instagram.com/", icon: "instagram" },
-  { label: "لینکدین", href: "https://linkedin.com/", icon: "linkedin" },
+  { label: "اینستاگرام", href: "https://instagram.com/", icon: IconInstagram },
+  { label: "لینکدین", href: "https://linkedin.com/", icon: IconLinkedin },
 ];
 const bottomSocialLinks = [
   { label: "تلگرام", href: "https://t.me/", icon: IconTelegram },
@@ -83,16 +83,9 @@ const quickAccess = [
               class="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-brand"
             >
               <span
-                class="flex h-7 w-7 items-center justify-center rounded-full border border-gray-200 text-ink-muted"
+                class="flex h-6 w-6 items-center justify-center rounded-full text-gray-500 transition-colors hover:text-gray-500"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="h-3.5 w-3.5"
-                >
-                  <component :is="item.icon" class="size-3.5" />
-                </svg>
+                <component :is="item.icon" class="" />
               </span>
               {{ item.label }}
             </a>
@@ -114,9 +107,9 @@ const quickAccess = [
             target="_blank"
             rel="noopener noreferrer"
             :aria-label="item.label"
-            class="flex h-9 w-9 items-center justify-center rounded-full bg-brand text-white transition-colors hover:bg-brand-dark"
+            class="flex h-6 w-6 items-center justify-center rounded-full text-brand transition-colors hover:text-brand-dark"
           >
-            <component :is="item.icon" class="size-4" />
+            <component :is="item.icon" class="" />
           </a>
         </li>
       </ul>

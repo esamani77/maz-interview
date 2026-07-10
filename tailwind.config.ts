@@ -7,6 +7,9 @@ export default <Partial<Config>>{
       fontFamily: {
         sans: ["Vazirmatn", "system-ui", "sans-serif"],
       },
+      boxShadow: {
+        header: '0px 2px 2px 0px #00000014'
+      },
       colors: {
         gray: {
           25: "#F5F7FA",

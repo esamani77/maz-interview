@@ -1,11 +1,11 @@
 <script setup lang="ts">
 interface Props {
-  size?: number | string;
+  size?: number | string
 }
 
 withDefaults(defineProps<Props>(), {
-  size: 24,
-});
+  size: 24
+})
 </script>
 
 <template>
@@ -20,7 +20,8 @@ withDefaults(defineProps<Props>(), {
     :width="size"
     :height="size"
   >
-    <path d="M3 10.5 12 3l9 7.5" />
-    <path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5" />
+    <line x1="4" y1="7" x2="20" y2="7" />
+    <line x1="4" y1="12" x2="20" y2="12" />
+    <line x1="4" y1="17" x2="20" y2="17" />
   </svg>
 </template>

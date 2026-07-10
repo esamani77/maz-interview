@@ -26,12 +26,6 @@ const { search, sortBy, selectedCategories, toggleCategory, filteredProducts } =
 <template>
   <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
     <div
-      class="mb-6 rounded-2xl bg-white px-6 py-4 text-xl font-bold text-ink shadow-sm"
-    >
-      لیست محصولات
-    </div>
-
-    <div
       v-if="status === 'pending'"
       class="rounded-2xl bg-white p-6 text-center text-sm text-ink-muted shadow-sm"
     >
