@@ -50,7 +50,7 @@ const quickAccess = [
           <li v-for="item in quickAccess" :key="item.label">
             <NuxtLink
               :to="item.to"
-              class="text-body-3 transition-colors hover:text-brand"
+              class="text-body-3 text-gray-800 transition-colors hover:text-brand"
             >
               {{ item.label }}
             </NuxtLink>
@@ -64,7 +64,7 @@ const quickAccess = [
           <li v-for="item in siteGuide" :key="item.label">
             <NuxtLink
               :to="item.to"
-              class="text-body-3 text-ink-muted transition-colors hover:text-brand"
+              class="text-body-3 text-gray-800 transition-colors hover:text-brand"
             >
               {{ item.label }}
             </NuxtLink>
@@ -80,7 +80,7 @@ const quickAccess = [
               :href="item.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-body-2 text-ink-muted transition-colors hover:text-brand"
+              class="flex items-center gap-2 text-body-2 text-gray-800 transition-colors hover:text-brand"
             >
               <span
                 class="flex h-6 w-6 items-center justify-center rounded-full text-gray-500 transition-colors hover:text-gray-500"
