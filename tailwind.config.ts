@@ -4,11 +4,15 @@ export default <Partial<Config>>{
   content: ["./app/**/*.{vue,js,ts}"],
   theme: {
     extend: {
+      fontSize: {
+        "body-2": ["14px", { fontWeight: "500" }],
+        "body-3": ["13px", { fontWeight: "500" }],
+      },
       fontFamily: {
         sans: ["Vazirmatn", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        header: '0px 2px 2px 0px #00000014'
+        header: "0px 2px 2px 0px #00000014",
       },
       colors: {
         gray: {

@@ -40,7 +40,7 @@ const quickAccess = [
       class="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-10 lg:grid-cols-4 sm:px-6 lg:px-8"
     >
       <p
-        class="mt-6 text-xs leading-6 text-ink-muted col-span-full lg:col-span-1 lg:place-self-end"
+        class="mt-6 text-body-3 text-ink-muted col-span-full lg:col-span-1 lg:place-self-end"
       >
         هفت روز هفته از ۸ صبح تا ۱۲ شب پاسخگو هستیم
       </p>
@@ -50,7 +50,7 @@ const quickAccess = [
           <li v-for="item in quickAccess" :key="item.label">
             <NuxtLink
               :to="item.to"
-              class="text-sm transition-colors hover:text-brand"
+              class="text-body-3 transition-colors hover:text-brand"
             >
               {{ item.label }}
             </NuxtLink>
@@ -64,7 +64,7 @@ const quickAccess = [
           <li v-for="item in siteGuide" :key="item.label">
             <NuxtLink
               :to="item.to"
-              class="text-sm text-ink-muted transition-colors hover:text-brand"
+              class="text-body-3 text-ink-muted transition-colors hover:text-brand"
             >
               {{ item.label }}
             </NuxtLink>
@@ -80,7 +80,7 @@ const quickAccess = [
               :href="item.href"
               target="_blank"
               rel="noopener noreferrer"
-              class="flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-brand"
+              class="flex items-center gap-2 text-body-2 text-ink-muted transition-colors hover:text-brand"
             >
               <span
                 class="flex h-6 w-6 items-center justify-center rounded-full text-gray-500 transition-colors hover:text-gray-500"
@@ -94,25 +94,45 @@ const quickAccess = [
       </div>
     </div>
 
-    <div class="border-t border-gray-100 px-4 py-8 sm:px-6 lg:px-8">
-      <p class="mx-auto max-w-xs text-center text-xs leading-6 text-ink-muted">
-        تمامی حقوق مادی و معنوی این وبسایت متعلق به می‌باشد و هر گونه کپی برداری
-        پیگرد قانونی دارد.
-      </p>
+    <div
+      class="border-t border-gray-100 px-4 py-8 sm:px-6 lg:px-8 flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between"
+    >
+      <div class="lg:w-1/3"></div>
+      <div class="lg:w-1/3">
+        <p
+          class="mx-auto max-w-xs text-center text-xs leading-6 text-ink-muted"
+        >
+          تمامی حقوق مادی و معنوی این وبسایت متعلق به می‌باشد و هر گونه کپی
+          برداری پیگرد قانونی دارد.
+        </p>
 
-      <ul class="mt-6 flex items-center justify-center gap-3">
-        <li v-for="item in bottomSocialLinks" :key="item.label">
-          <a
-            :href="item.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            :aria-label="item.label"
-            class="flex h-6 w-6 items-center justify-center rounded-full text-brand transition-colors hover:text-brand-dark"
-          >
-            <component :is="item.icon" class="" />
-          </a>
-        </li>
-      </ul>
+        <ul class="mt-6 flex items-center justify-center gap-3">
+          <li v-for="item in bottomSocialLinks" :key="item.label">
+            <a
+              :href="item.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              :aria-label="item.label"
+              class="flex h-6 w-6 items-center justify-center rounded-full text-brand transition-colors hover:text-brand-dark"
+            >
+              <component :is="item.icon" class="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mt-6 flex items-center justify-center gap-3 lg:w-1/3">
+        <img
+          src="/images/enamd-placeholder.png"
+          alt="نماد اعتماد الکترونیکی"
+          class="h-16 w-16 rounded-md border border-gray-100 bg-white object-contain p-1"
+        />
+        <img
+          src="/images/tegarat-placeholder.png"
+          alt="نماد ساماندهی"
+          class="h-16 w-16 rounded-md border border-gray-100 bg-white object-contain p-1"
+        />
+      </div>
     </div>
   </footer>
 </template>
